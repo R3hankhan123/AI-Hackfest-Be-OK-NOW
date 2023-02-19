@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:mera_mann/model/get_data.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DiagnosisPage extends StatefulWidget {
   const DiagnosisPage({super.key});
@@ -83,7 +84,7 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                         width: 200,
                         height: 200,
                         child: Image.asset(
-                            'asset/mera-mann-high-resolution-logo-color-on-transparent-background.png'),
+                            'asset/be-ok-now-high-resolution-logo-color-on-transparent-background (1).png'),
                       ),
                       const SizedBox(
                         height: 20,
@@ -151,6 +152,41 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const Text(
+                        "Feel free to talk to our chatbot or Schedule an appointment with a therapist ",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        width: 200,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () async {
+                            Uri uri = Uri.parse(
+                                'https://huggingface.co/spaces/upranayak/MindCheck');
+                            await launchUrl(uri);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                const Color.fromRGBO(0, 99, 219, 1),
+                          ),
+                          child: const Text(
+                            "Click here to chat",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),

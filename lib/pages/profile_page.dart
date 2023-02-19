@@ -48,7 +48,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       width: 400,
                       child: Image(
                           image: AssetImage(
-                              'asset/mera-mann-high-resolution-logo-color-on-transparent-background.png')),
+                              'asset/be-ok-now-high-resolution-logo-color-on-transparent-background (1).png')),
                     ),
                     Text(
                       snapshot.data!.docs[0]['Name'],

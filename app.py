@@ -5,10 +5,11 @@ import nltk
 import re
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-model1 = pickle.load(open('classifier_depression.pkl', 'rb'))
+import tensorflow as tf
+from keras.models import load_model
+model = load_model('model.h5')
 count = pickle.load(open('count.pkl', 'rb'))
 app = Flask(__name__)
-
 @app.route('/predict',methods=['POST'])    
 def predictor():
     text = request.form['text']
@@ -19,13 +20,13 @@ def predictor():
     text=[lemmatize.lemmatize(word) for word in text if not word in stopwords.words('english')]
     text=' '.join(text)
     sample=count.transform([text]).toarray()
-    prediction=model1.predict(sample)[0]
+    prediction=model.predict(sample)[0]
     prediction=str(prediction)
     if prediction=='0':
         res='Not Depressed'
     else:
         res='Depressed'
-    return jsonify({'isDepressed':res})
+    return jsonify({'isDepressed':res,})
   
                      
 if __name__ == '__main__':

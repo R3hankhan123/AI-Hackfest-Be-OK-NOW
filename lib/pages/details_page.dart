@@ -94,7 +94,7 @@ class _DetailsState extends State<Details> {
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                        'asset/mera-mann-high-resolution-logo-color-on-transparent-background.png'),
+                        'asset/be-ok-now-high-resolution-logo-color-on-transparent-background (1).png'),
                     fit: BoxFit.cover,
                   ),
                 ),

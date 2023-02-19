@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Padding(
           padding: EdgeInsets.only(right: 50),
-          child: Center(child: Text('Mera Mann')),
+          child: Center(child: Text('Be OK Now')),
         ),
         elevation: 0,
         flexibleSpace: Container(

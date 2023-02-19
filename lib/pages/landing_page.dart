@@ -34,7 +34,7 @@ class _LandingPageState extends State<LandingPage> {
               Row(
                 children: [
                   const Text(
-                    "Mera Mann",
+                    "Be OK Now",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 45,
@@ -113,16 +113,6 @@ class _LandingPageState extends State<LandingPage> {
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-                      const Padding(
-                        padding: EdgeInsets.only(right: 100),
-                        child: Text(
-                          "What is Mera Mann?",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 45,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
                       const SizedBox(
                         height: 20,
                       ),
@@ -166,7 +156,7 @@ class _LandingPageState extends State<LandingPage> {
                     height: 500,
                     child: Image(
                         image: AssetImage(
-                            "asset/mera-mann-high-resolution-logo-color-on-transparent-background.png")),
+                            "asset/be-ok-now-high-resolution-logo-color-on-transparent-background (1).png")),
                   ),
                 ],
               ),

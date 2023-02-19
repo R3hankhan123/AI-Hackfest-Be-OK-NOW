@@ -38,7 +38,7 @@ class _ProfilePageState extends State<DoctorProfilePage> {
   void initState() {
     super.initState();
     twilioFlutter = TwilioFlutter(
-        accountSid: 'XXXX', authToken: 'XXXXXX', twilioNumber: 'xXXXX');
+        accountSid: 'XXXX', authToken: 'XXXXXX', twilioNumber: 'xXXXXgit init');
   }
 
   void sendSms(String name, String phone) async {

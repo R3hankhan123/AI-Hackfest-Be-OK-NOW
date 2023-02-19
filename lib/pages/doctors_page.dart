@@ -51,7 +51,8 @@ class _DoctorListState extends State<DoctorList> {
                   },
                   child: Card(
                       child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const CircleAvatar(
                         backgroundImage: NetworkImage(
@@ -81,7 +82,7 @@ class _DoctorListState extends State<DoctorList> {
                           Text(doctorList[index]['Pincode'],
                               style: const TextStyle(fontSize: 18)),
                         ],
-                      )
+                      ),
                     ],
                   )),
                 );
